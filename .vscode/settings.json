@@ -1,0 +1,17 @@
+{
+    "gopls": {
+        "build.env": {
+          "GOOS": "js",
+          "GOARCH": "wasm"
+        }
+      },
+      "cSpell.words": [
+        "axgonz",
+        "honnef",
+        "initialisation",
+        "initialised",
+        "goptos",
+        "gowebapi",
+        "webapi"
+      ]
+}

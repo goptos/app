@@ -1,0 +1,18 @@
+{
+  "name": "goptos",
+  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+          "streetsidesoftware.code-spell-checker",
+          "eamodio.gitlens",
+          "bierner.markdown-preview-github-styles",
+          "shardulm94.trailing-spaces",
+          "ms-vscode-remote.remote-containers",
+          "ms-vscode.makefile-tools",
+          "golang.go"
+      ]
+    }
+  },
+  "postCreateCommand":  "make devcontainer"
+}
