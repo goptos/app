@@ -15,4 +15,4 @@ func main() {
 	system.Run(App.View)
 }
 
-//go:generate go run macros/view.go
+//go:generate goptos genview
