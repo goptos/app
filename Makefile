@@ -44,6 +44,7 @@
 	export GOARCH=wasm && \
 	cd src && \
 	go build -o ../dist/main.wasm main.go
+	goptos package
 
 .PHONY serve: gogen build
 	goptos serve

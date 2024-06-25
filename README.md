@@ -24,7 +24,7 @@ Running `Make pre` will install prerequisites including Go and the Goptos CLI. T
 
 Running `Make goptos` will clone the additional Goptos repositories for you. This is also already run when using a Dev Container.
 
-You will need open the additional Goptos directory to your dev workspace. If using Dev Containers this will reload the session.
+You will need add the additional Goptos directory to your dev workspace. If using Dev Containers this will reload the session.
 
 You should end up with a file structure as follows:
 
