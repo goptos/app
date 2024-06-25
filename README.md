@@ -6,7 +6,7 @@ A fine grained reactive web framework in Go.
 
 # Usage
 
-To learn Goptos please refer to the docs. This README is primarily concerned with contributor guidance.
+To learn Goptos please refer to the [docs](https://github.com/goptos/docs). This README is primarily concerned with contributor guidance.
 
 > N.B you won't need to follow any steps details here if only want to use Goptos, instead follow the getting started guide.
 
