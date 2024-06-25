@@ -2,11 +2,11 @@ module github.com/goptos/app
 
 go 1.22.4
 
-require github.com/goptos/runtime v0.1.0
+require github.com/goptos/runtime v0.1.1
 
 // replace github.com/goptos/runtime => ../../goptos/runtime
 
-require github.com/goptos/system v0.1.0
+require github.com/goptos/system v0.1.1
 
 // replace github.com/goptos/system => ../../goptos/system
 
