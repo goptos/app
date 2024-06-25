@@ -36,6 +36,7 @@ app
   > src
   .gitignore
   index.html
+  LICENSE
   Makefile
   README.md
 goptos
