@@ -33,12 +33,15 @@
 	cd src && \
 	go generate
 
-.PHONY build:
+.PHONY gobuild:
 	export GOOS=js && \
 	export GOARCH=wasm && \
 	cd src && \
 	go build -o ../dist/main.wasm main.go
+
+.PHONY build:
+	goptos build
 	goptos package
 
-.PHONY serve: gogen build
+.PHONY serve:
 	goptos serve
