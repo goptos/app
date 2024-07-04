@@ -21,10 +21,8 @@
 	echo export GONOPROXY=\$$GONOPROXY,github.com/goptos | tee --append $$HOME/.profile && \
 	sudo mkdir -p ../goptos && \
 	sudo chmod 777 ../goptos && \
-	cd ../goptos && git clone https://github.com/goptos/ast ; \
 	cd ../goptos && git clone https://github.com/goptos/goptos ; \
-	cd ../goptos && git clone https://github.com/goptos/lexer ; \
-	cd ../goptos && git clone https://github.com/goptos/parser ; \
+	cd ../goptos && git clone https://github.com/goptos/stateparser ; \
 	cd ../goptos && git clone https://github.com/goptos/runtime ; \
 	cd ../goptos && git clone https://github.com/goptos/system ; \
 	cd ../goptos && git clone https://github.com/goptos/utils

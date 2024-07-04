@@ -63,14 +63,14 @@ func View(cx *Scope) *Elem {
 	})
 
 	/* macro:generated:view:start */
-	var view *Elem = (*Elem).New(nil, "div").Child((*Elem).New(nil, "p").Child((*Elem).New(nil, "b").Text("Goptos"))).Child((*Elem).New(nil, "p").Text("A fine grained reactive web framework in Go")).Child((*Elem).New(nil, "p").Child((*Elem).New(nil, "i").Text("Inspired by Leptos and SolidJS"))).Child((*Elem).New(nil, "button").Attr("type", "button").On("click", clickAddF).Text("Parent Add")).Child((*Elem).New(nil, "button").Attr("type", "button").On("click", clickSubF).Text("Parent Sub")).Child((*Elem).New(nil, "p").Text("Parent Count ").DynText(cx, func() string { return fmt.Sprintf("%v", count.Get()) })).Child((*Elem).New(nil, "div").Child(Button.View(cx, count)).Attr("count", "")).DynChild(cx, showF, (*Elem).New(nil, "div").Child((*Elem).New(nil, "a").Attr("href", "http://localhost:8080").Attr("id", "link-id").Text("Reload"))).Child(system.Each((*Elem).New(nil, "ul"), cx, eachCollectF, eachKeyF, Li.View))
+	var view *Elem = (*Elem).New(nil, "div").DynAttr(cx, showF, "class", "dark").Child((*Elem).New(nil, "p").Child((*Elem).New(nil, "b").Text("Goptos"))).Child((*Elem).New(nil, "p").Text("A fine grained reactive web framework in Go")).Child((*Elem).New(nil, "p").Child((*Elem).New(nil, "i").Text("Inspired by Leptos and SolidJS"))).Child((*Elem).New(nil, "button").Attr("type", "button").On("click", clickAddF).Text("Parent Add")).Child((*Elem).New(nil, "button").Attr("type", "button").On("click", clickSubF).Text("Parent Sub")).Child((*Elem).New(nil, "p").Text("Parent Count ").DynText(cx, func() string { return fmt.Sprintf("%v", count.Get()) })).Child((*Elem).New(nil, "div").Child(Button.View(cx, count)).Attr("count", "")).DynChild(cx, showF, (*Elem).New(nil, "div").Child((*Elem).New(nil, "a").Attr("href", "http://localhost:8080").Attr("id", "link-id").Text("Reload"))).Child(system.Each((*Elem).New(nil, "ul"), cx, eachCollectF, eachKeyF, Li.View))
 	/* macro:generated:view:end */
 
 	return view
 }
 
 /* View
-<div>
+<div class:dark={showF}>
 	<p><b>Goptos</b></p>
 	<p>A fine grained reactive web framework in Go</p>
 	<p><i>Inspired by Leptos and SolidJS</i></p>
