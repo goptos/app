@@ -20,9 +20,9 @@ func View(cx *Scope, parentCount IntSignal) *Elem {
 		fmt.Println("Testing")
 	}
 
-    /* macro:generated:view:start */
-    var view *Elem = (*Elem).New(nil, "div").Child((*Elem).New(nil, "button").On("click", clickF).Text("Child Add")).Child((*Elem).New(nil, "p").Text("Child Count ").DynText(cx, func() string { return fmt.Sprintf("%v", count.Get()) }))
-    /* macro:generated:view:end */
+	/* macro:generated:view:start */
+	var view *Elem = (*Elem).New(nil, "div").Child((*Elem).New(nil, "button").On("click", clickF).Text("Child Add")).Child((*Elem).New(nil, "p").Text("Child Count ").DynText(cx, func() string { return fmt.Sprintf("%v", count.Get()) }))
+	/* macro:generated:view:end */
 
 	return view
 }
