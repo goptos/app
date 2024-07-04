@@ -6,9 +6,9 @@ require github.com/goptos/runtime v0.1.1
 
 // replace github.com/goptos/runtime => ../../goptos/runtime
 
-require github.com/goptos/system v0.1.1
+require github.com/goptos/system v0.1.2
 
-replace github.com/goptos/system => ../../goptos/system
+// replace github.com/goptos/system => ../../goptos/system
 
 require github.com/goptos/utils v0.1.0 // indirect
 

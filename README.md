@@ -63,23 +63,39 @@ Goptos utils provides a `Verbose` struct to easily print debug statements. This 
 
 This will likely be done through pull request, however, more information to come here...
 
-### Module dependency map
+### Module dependencies
 
-#### app
+Version number bumps must be carried out in the following order.
+
+1. `utils`
+1. `stateparser` | `runtime`
+1. `goptos` | `system`
+1. `app`
+
+When bumping `goptos` make sure to also update `const cliVersion = "v0.1.8"` in main.go.
+
+Also make sure to comment out any local redirects in each go.mod.
+
+Lastly make sure to run `go clean -cache --modcache` and then `go mod tidy` before tagging each module.
+
+#### `app` depends on
 
 - runtime
 - system
 - utils
 - dom (indirectly through system)
 
-#### system
+#### `system` depends on
 - runtime
 - dom
 - utils (indirectly through runtime)
 
-#### runtime
+#### `runtime` depends on
 - utils
 
-#### goptos
+#### `goptos` depends on
 - stateparser
+- utils
+
+#### `stateparser` depends on
 - utils
