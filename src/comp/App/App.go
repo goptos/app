@@ -62,9 +62,9 @@ func View(cx *Scope) *Elem {
 		fmt.Printf("::: Derived signal value is: %d\n", double_count())
 	})
 
-	/* macro:generated:view:start */
-	var view *Elem = (*Elem).New(nil, "div").Child((*Elem).New(nil, "p").Child((*Elem).New(nil, "b").Text("Goptos"))).Child((*Elem).New(nil, "p").Text("A").Text(" ").Text("fine").Text(" ").Text("grained").Text(" ").Text("reactive").Text(" ").Text("web").Text(" ").Text("framework").Text(" ").Text("in").Text(" ").Text("Go")).Child((*Elem).New(nil, "p").Child((*Elem).New(nil, "i").Text("Inspired").Text(" ").Text("by").Text(" ").Text("Leptos").Text(" ").Text("and").Text(" ").Text("SolidJS"))).Child((*Elem).New(nil, "button").Attr("type", "button").On("click", clickAddF).Text("Parent").Text(" ").Text("Add")).Child((*Elem).New(nil, "button").Attr("type", "button").On("click", clickSubF).Text("Parent").Text(" ").Text("Sub")).Child((*Elem).New(nil, "p").Text("Parent").Text(" ").Text("Count").Text(" ").DynText(cx, func() string { return fmt.Sprintf("%v", count.Get()) })).Child((*Elem).New(nil, "div").Child(Button.View(cx, count))).DynChild(cx, showF, (*Elem).New(nil, "div").Child((*Elem).New(nil, "a").Attr("href", "http://localhost:8080").Attr("id", "link-id").Text("Reload"))).Child(system.Each((*Elem).New(nil, "ul"), cx, eachCollectF, eachKeyF, Li.View))
-	/* macro:generated:view:end */
+    /* macro:generated:view:start */
+    var view *Elem = (*Elem).New(nil, "div").Child((*Elem).New(nil, "p").Child((*Elem).New(nil, "b").Text("Goptos"))).Child((*Elem).New(nil, "p").Text("A fine grained reactive web framework in Go")).Child((*Elem).New(nil, "p").Child((*Elem).New(nil, "i").Text("Inspired by Leptos and SolidJS"))).Child((*Elem).New(nil, "button").Attr("type", "button").On("click", clickAddF).Text("Parent Add")).Child((*Elem).New(nil, "button").Attr("type", "button").On("click", clickSubF).Text("Parent Sub")).Child((*Elem).New(nil, "p").Text("Parent Count ").DynText(cx, func() string { return fmt.Sprintf("%v", count.Get()) })).Child((*Elem).New(nil, "div").Child(Button.View(cx, count)).Attr("count", "")).DynChild(cx, showF, (*Elem).New(nil, "div").Child((*Elem).New(nil, "a").Attr("href", "http://localhost:8080").Attr("id", "link-id").Text("Reload"))).Child(system.Each((*Elem).New(nil, "ul"), cx, eachCollectF, eachKeyF, Li.View))
+    /* macro:generated:view:end */
 
 	return view
 }

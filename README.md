@@ -63,6 +63,23 @@ Goptos utils provides a `Verbose` struct to easily print debug statements. This 
 
 This will likely be done through pull request, however, more information to come here...
 
+### Module dependency map
 
+#### app
 
+- runtime
+- system
+- utils
+- dom (indirectly through system)
 
+#### system
+- runtime
+- dom
+- utils (indirectly through runtime)
+
+#### runtime
+- utils
+
+#### goptos
+- stateparser
+- utils
