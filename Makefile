@@ -27,6 +27,11 @@
 	cd ../goptos && git clone https://github.com/goptos/system ; \
 	cd ../goptos && git clone https://github.com/goptos/utils
 
+.PHONY lsp:
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash && \
+	nvm insall node && \
+	nvm use node
+
 .PHONY gogen:
 	cd src && \
 	go generate
